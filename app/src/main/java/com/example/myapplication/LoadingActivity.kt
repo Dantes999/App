@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import com.example.myapplication.ui.main.LoadingFragment
 
 
 class LoadingActivity : AppCompatActivity() {
@@ -15,7 +14,7 @@ class LoadingActivity : AppCompatActivity() {
         setContentView(R.layout.loading_activity)
 
         mRunnable = Runnable {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, HomeActivity::class.java))
             finish()
         }
 

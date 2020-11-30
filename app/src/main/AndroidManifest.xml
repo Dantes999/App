@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_recipes_activity"></activity>
+        <activity
             android:name=".LoadingActivity"
             android:label="@string/title_activity_loading"
             android:theme="@style/AppTheme.NoActionBar">
