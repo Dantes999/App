@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.home
+package com.example.myapplication.ui.planner
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 
-class HomeFragment : Fragment() {
+class PlannerFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var plannerViewModel: PlannerViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_recipes, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        plannerViewModel =
+            ViewModelProvider(this).get(PlannerViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_planner, container, false)
+        val textView: TextView = root.findViewById(R.id.text_notifications)
+        plannerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root
