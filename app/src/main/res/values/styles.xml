@@ -4,7 +4,23 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccentDark">@color/colorAccentDark</item>
+        <item name="colorOnAccent">@color/colorOnAccent</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryDark">@color/colorSecondaryDark</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorTertiary">@color/colorTertiary</item>
+        <item name="colorTertiaryDark">@color/colorTertiaryDark</item>
+        <item name="colorOnTertiary">@color/colorOnTertiary</item>
+        <item name="colorQuaternary">@color/colorQuaternary</item>
+        <item name="colorQuaternaryDark">@color/colorQuaternaryDark</item>
+        <item name="colorOnQuaternary">@color/colorOnQuaternary</item>
+        <item name="colorDanger">@color/colorDanger</item>
+        <item name="colorWarning">@color/colorWarning</item>
+        <item name="colorSuccess">@color/colorSuccess</item>
+
     </style>
 
 </resources>
