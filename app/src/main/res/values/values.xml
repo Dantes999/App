@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="card_image_alpha" type="integer">0.2</item>
+    <item name="card_image_alpha" type="integer">0.4</item>
 
     <attr format="color" name="colorAccentDark"/>
     <attr format="color" name="colorOnAccent"/>

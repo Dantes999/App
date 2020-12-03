@@ -21,6 +21,8 @@
         <item name="colorWarning">@color/colorWarning</item>
         <item name="colorSuccess">@color/colorSuccess</item>
 
+        <item name="android:fitsSystemWindows">true</item>
+
     </style>
 
 </resources>

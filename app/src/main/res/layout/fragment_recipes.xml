@@ -4,111 +4,119 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
     tools:context=".ui.recipes.RecipesFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <androidx.cardview.widget.CardView
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="?attr/colorAccent">
-            <LinearLayout
-                android:padding="15dp"
-                android:orientation="horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Anstellgut"
-                    android:textSize="24dp"
-                    android:textColor="?attr/colorOnAccent"/>
-                <RelativeLayout
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorAccent">
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_margin="12dp"
-                        android:layout_alignParentRight="true"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_starter"
-                        android:tint="?attr/colorOnAccent"
-                        android:alpha="@integer/card_image_alpha"></ImageView>
-                </RelativeLayout>
-            </LinearLayout>
+                        android:text="Anstellgut"
+                        android:textSize="24dp"
+                        android:textColor="?attr/colorOnAccent"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_margin="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_starter"
+                            android:tint="?attr/colorOnAccent"
+                            android:alpha="@integer/card_image_alpha"></ImageView>
+                    </RelativeLayout>
+                </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="?attr/colorQuaternary">
-            <LinearLayout
-                android:padding="15dp"
-                android:orientation="horizontal"
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Sauerteig Führung"
-                    android:textSize="24dp"
-                    android:textColor="?attr/colorOnQuaternary"/>
-                <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorQuaternary">
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_margin="12dp"
-                        android:layout_alignParentRight="true"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_sourdough"
-                        android:tint="?attr/colorOnQuaternary"
-                        android:alpha="@integer/card_image_alpha"></ImageView>
-                </RelativeLayout>
-            </LinearLayout>
+                        android:text="Sauerteig Führung"
+                        android:textSize="24dp"
+                        android:textColor="?attr/colorOnQuaternary"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_margin="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_sourdough"
+                            android:tint="?attr/colorOnQuaternary"
+                            android:alpha="@integer/card_image_alpha"></ImageView>
+                    </RelativeLayout>
+                </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="?attr/colorTertiary">
-            <LinearLayout
-                android:padding="15dp"
-                android:orientation="horizontal"
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Brotrezepte"
-                    android:textSize="24dp"
-                    android:textColor="?attr/colorOnTertiary"/>
-                <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorTertiary">
+                <LinearLayout
+                    android:padding="15dp"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_margin="12dp"
-                        android:layout_alignParentRight="true"
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_breat_outlines"
-                        android:tint="?attr/colorOnTertiary"
-                        android:alpha="@integer/card_image_alpha"></ImageView>
-                </RelativeLayout>
-            </LinearLayout>
+                        android:text="Brotrezepte"
+                        android:textSize="24dp"
+                        android:textColor="?attr/colorOnTertiary"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_margin="12dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_breat_outlines"
+                            android:tint="?attr/colorOnTertiary"
+                            android:alpha="@integer/card_image_alpha"></ImageView>
+                    </RelativeLayout>
+                </LinearLayout>
 
-        </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
 
 
 
