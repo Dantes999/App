@@ -19,6 +19,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/starter"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="?attr/colorAccent">
                 <LinearLayout
@@ -50,6 +53,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/sourdough"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="?attr/colorQuaternary">
@@ -83,6 +89,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:id="@+id/bread"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="?attr/colorTertiary">
                 <LinearLayout
