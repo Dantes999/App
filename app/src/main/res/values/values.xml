@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="card_image_alpha" type="integer">0.4</item>
+
+    <attr format="color" name="colorAccentDark"/>
+    <attr format="color" name="colorOnAccent"/>
+    <attr format="color" name="colorSecondaryDark"/>
+    <attr format="color" name="colorTertiary"/>
+    <attr format="color" name="colorTertiaryDark"/>
+    <attr format="color" name="colorOnTertiary"/>
+    <attr format="color" name="colorQuaternary"/>
+    <attr format="color" name="colorQuaternaryDark"/>
+    <attr format="color" name="colorOnQuaternary"/>
+    <attr format="color" name="colorDanger"/>
+    <attr format="color" name="colorWarning"/>
+    <attr format="color" name="colorSuccess"/>
+</resources>

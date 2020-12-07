@@ -22,10 +22,6 @@ class RecipesFragment : Fragment() {
         recipesViewModel =
             ViewModelProvider(this).get(RecipesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_recipes, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        recipesViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 }
