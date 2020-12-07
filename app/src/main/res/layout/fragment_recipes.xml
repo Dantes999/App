@@ -118,11 +118,7 @@
                             android:alpha="@integer/card_image_alpha"></ImageView>
                     </RelativeLayout>
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
-
-
         </LinearLayout>
     </ScrollView>
 
