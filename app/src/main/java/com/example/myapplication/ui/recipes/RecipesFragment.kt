@@ -9,9 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
-import com.example.myapplication.RecipesList
-import kotlinx.android.synthetic.main.activity_recipes_list.*
-import kotlinx.android.synthetic.main.fragment_recipes.*
+import com.example.myapplication.RecipesListActivity
 
 
 class RecipesFragment : Fragment() {
@@ -29,8 +27,7 @@ class RecipesFragment : Fragment() {
 
         val card: CardView = root.findViewById(R.id.sourdough)
         card.setOnClickListener(View.OnClickListener {
-            val intent = Intent(activity, RecipesList::class.java)
-            startActivity(intent)
+            startActivity(Intent(activity, RecipesListActivity::class.java))
         })
 
         return root

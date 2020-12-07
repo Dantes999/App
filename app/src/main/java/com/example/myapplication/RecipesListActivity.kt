@@ -5,11 +5,11 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_recipes_list.*
 
-class RecipesList : AppCompatActivity() {
+class RecipesListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipes_list)
-
+        setTitle("Sauerteig Führung");
         val exampleRecipes = generateDummyList()
 
         sourdough_recycler_view.adapter = RecipesRecyclerViewAdapter(exampleRecipes)
