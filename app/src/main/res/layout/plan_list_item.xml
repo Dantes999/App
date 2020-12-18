@@ -10,9 +10,9 @@
         android:id="@+id/tvHeader"
         android:layout_width="409dp"
         android:layout_height="34dp"
-        android:background="@color/colorTertiary"
+        android:background="?attr/colorTertiary"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/colorOnTertiary"
+        android:textColor="?attr/colorOnTertiary"
         android:textStyle="bold"
         tools:text="Header Title" />
 
