@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".RecipesListActivity"></activity>
+        <activity android:name=".PlanerListActivity"></activity>
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_recipes_activity" />

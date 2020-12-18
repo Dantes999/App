@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.R
 import com.example.myapplication.RecipesListActivity
+import com.google.android.material.snackbar.Snackbar
 
 
 class RecipesFragment : Fragment() {
@@ -24,12 +25,20 @@ class RecipesFragment : Fragment() {
         recipesViewModel =
             ViewModelProvider(this).get(RecipesViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_recipes, container, false)
-
-        val card: CardView = root.findViewById(R.id.sourdough)
-        card.setOnClickListener(View.OnClickListener {
+        val sourdoughcard: CardView = root.findViewById(R.id.sourdough)
+        sourdoughcard.setOnClickListener(View.OnClickListener {
             startActivity(Intent(activity, RecipesListActivity::class.java))
         })
-
+        val breadcard: CardView = root.findViewById(R.id.bread)
+        breadcard.setOnClickListener(View.OnClickListener {
+            //startActivity(Intent(activity, RecipesListActivity::class.java))
+            Snackbar.make(breadcard, "Kommt noch", Snackbar.LENGTH_SHORT).show()
+        })
+        val startercard: CardView = root.findViewById(R.id.starter)
+        startercard.setOnClickListener(View.OnClickListener {
+            //startActivity(Intent(activity, RecipesListActivity::class.java))
+            Snackbar.make(startercard, "Kommt auch noch", Snackbar.LENGTH_SHORT).show()
+        })
         return root
     }
 }
