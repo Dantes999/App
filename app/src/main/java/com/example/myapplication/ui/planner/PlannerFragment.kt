@@ -10,9 +10,11 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.example.myapplication.PlanerListActivity
-import com.example.myapplication.R
-import com.example.myapplication.RecipesListActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.*
+import com.example.myapplication.ui.recipes.RecipesViewModel
+import kotlinx.android.synthetic.main.activity_recipes_list.*
 
 class PlannerFragment : Fragment() {
 
@@ -26,13 +28,42 @@ class PlannerFragment : Fragment() {
         plannerViewModel =
             ViewModelProvider(this).get(PlannerViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_planner, container, false)
+
+        val examplePlan = generateDummyList()
+        val recyclerView: RecyclerView = root.findViewById(R.id.planer_recycler_view)
+        recyclerView.adapter = PlanerRecyclerViewAdapter(examplePlan)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.setHasFixedSize(true)
+
         /*val textView: TextView = root.findViewById(R.id.text_notifications)
         plannerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })*/
 
-        startActivity(Intent(activity, PlanerListActivity::class.java))
+        //startActivity(Intent(activity, PlanerListActivity::class.java))
 
         return root
+    }
+    private fun generateDummyList(): List<Plan> {
+        val list = ArrayList<Plan>()
+
+        val plan1 = Plan("Anstellgut",0,"Anstellgut", "1h 20min", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan1_1 = Plan("Anstellgut",0,"Anstellgut 2", "1h 20min", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan1_2 = Plan("Anstellgut",0,"Anstellgut 3", "1h 20min", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+
+        val plan2 = Plan("Sauerteigführung",1,"Salzsauer", "5h 20min", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan2_1 = Plan("Sauerteigführung",1,"Salzsauer 2", "5h 20min", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan3 = Plan("Brot",2,"Einfache Dreistufenführung", "0", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan3_1 = Plan("Brot",2,"Einfache Dreistufenführung 2", "0", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        val plan3_2 = Plan("Brot",2,"Einfache Dreistufenführung 3", "0", R.drawable.ic_planer_icon, R.drawable.ic_planer_time)
+        list += plan1
+        list += plan1_1
+        list += plan1_2
+        list += plan2
+        list += plan2_1
+        list += plan3
+        list += plan3_1
+        list += plan3_2
+        return list
     }
 }
