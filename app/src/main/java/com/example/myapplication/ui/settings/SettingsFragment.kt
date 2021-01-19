@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Plan
 import com.example.myapplication.PlanerRecyclerViewAdapter
 import com.example.myapplication.R
+import com.google.android.material.slider.RangeSlider
+
 
 class SettingsFragment : Fragment() {
 
@@ -26,8 +28,8 @@ class SettingsFragment : Fragment() {
         settingsViewModel =
             ViewModelProvider(this).get(SettingsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_settings, container, false)
-
-
+        val slider: RangeSlider = root.findViewById(R.id.slider)
+        slider.setValues(1.0f, 5.0f)
         return root
     }
 
