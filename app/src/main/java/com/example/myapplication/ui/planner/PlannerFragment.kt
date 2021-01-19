@@ -29,18 +29,11 @@ class PlannerFragment : Fragment() {
             ViewModelProvider(this).get(PlannerViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_planner, container, false)
 
-        val examplePlan = generateDummyList()
+        val examplePlans = generateDummyList()
         val recyclerView: RecyclerView = root.findViewById(R.id.planer_recycler_view)
-        recyclerView.adapter = PlanerRecyclerViewAdapter(examplePlan)
+        recyclerView.adapter = PlanerRecyclerViewAdapter(examplePlans)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
-
-        /*val textView: TextView = root.findViewById(R.id.text_notifications)
-        plannerViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })*/
-
-        //startActivity(Intent(activity, PlanerListActivity::class.java))
 
         return root
     }
