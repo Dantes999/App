@@ -25,4 +25,9 @@
 
     </style>
 
+    <style name="TertiaryButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
 </resources>

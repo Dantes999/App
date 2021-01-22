@@ -1,14 +1,17 @@
 package com.example.myapplication
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
-class RecipesRecyclerViewAdapter(private val recipeList: List<Recipe>) :
+class RecipesRecyclerViewAdapter(
+    private val recipeList: List<Recipe>
+) :
     RecyclerView.Adapter<RecipesRecyclerViewAdapter.ViewHolder>() {
 
     /**
@@ -20,6 +23,7 @@ class RecipesRecyclerViewAdapter(private val recipeList: List<Recipe>) :
         val recipeTime: TextView
         val recipeDifficulty: TextView
         val recipeImage: ImageView
+        val context: Context
 
         init {
             // Define click listener for the ViewHolder's View.
@@ -27,6 +31,7 @@ class RecipesRecyclerViewAdapter(private val recipeList: List<Recipe>) :
             recipeTime = view.findViewById(R.id.recipe_time)
             recipeDifficulty = view.findViewById(R.id.recipe_difficulty)
             recipeImage = view.findViewById(R.id.recipe_image)
+            context = itemView.getContext();
         }
     }
 
@@ -43,10 +48,15 @@ class RecipesRecyclerViewAdapter(private val recipeList: List<Recipe>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         val currentItem = recipeList[position]
 
+
         viewHolder.recipeName.text = currentItem.name
         viewHolder.recipeTime.text = currentItem.time
         viewHolder.recipeDifficulty.text = currentItem.difficulty
         viewHolder.recipeImage.setImageResource(currentItem.imageResource)
+
+        val intent = Intent(viewHolder.context, ConfigurationActivity::class.java)
+
+        viewHolder.itemView.setOnClickListener { viewHolder.context.startActivity(intent) }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
