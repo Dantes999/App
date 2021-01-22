@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -8,6 +8,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.ConfigurationActivity
+import com.example.myapplication.R
+import com.example.myapplication.Recipe
 
 class RecipesRecyclerViewAdapter(
     private val recipeList: List<Recipe>

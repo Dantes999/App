@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.dataclasses.Ingredients
+import com.example.myapplication.R
 
 class IngredianceRecyclerViewAdapter (private val ingredientsList: List<Ingredients>) :
     RecyclerView.Adapter<IngredianceRecyclerViewAdapter.ViewHolder>() {
