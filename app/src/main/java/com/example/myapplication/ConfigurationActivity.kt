@@ -3,7 +3,8 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.adapter.IngredianceRecyclerViewAdapter
+import com.example.myapplication.dataclasses.Ingredients
 import kotlinx.android.synthetic.main.configuration_activity.*
 
 class ConfigurationActivity : AppCompatActivity() {

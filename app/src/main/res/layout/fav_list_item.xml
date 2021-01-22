@@ -8,62 +8,65 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/tvHeader"
-            android:layout_width="409dp"
-            android:layout_height="34dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/activity_horizontal_margin"
+            android:paddingVertical="@dimen/divider_horizontal_padding"
             android:background="?attr/colorTertiary"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="@dimen/list_fontSize_Header"
             android:textColor="?attr/colorOnTertiary"
-            android:textStyle="bold"
             tools:text="Header Title" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="@dimen/list_padding"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent">
+            android:padding="@dimen/list_padding">
 
-            <ImageView
-                android:id="@+id/fav_image"
-                android:layout_width="54dp"
-                android:layout_height="51dp"
-                android:src="@drawable/ic_favorite_icon" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/recipes_list_imagesize"
+                android:layout_height="@dimen/recipes_list_imagesize"
+                android:layout_marginRight="@dimen/list_padding"
+                android:src="@drawable/ic_favorite_icon"
+                android:id="@+id/fav_image"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/fav_name"
-                    android:layout_width="186dp"
-                    android:layout_height="26dp"
-                    android:layout_marginLeft="20dp"
-                    android:text="TextView" />
+                    android:textSize="@dimen/list_fontSize_Header"
+                    android:text="TestText"/>
 
-                <TextView
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:id="@+id/fav_time"
-                    android:layout_width="106dp"
-                    android:layout_height="26dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="TextView"
-                    android:textSize="17sp" />
+                    android:textSize="@dimen/list_fontSize_Secondary"
+                    android:text="TestText"/>
+
             </LinearLayout>
-            <TextView
-                android:id="@+id/fav_grade"
-                android:layout_width="106dp"
-                android:layout_height="26dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="20dp"
-                android:text="TextView"
-                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/list_fontSize_Tertiary"
+                    android:id="@+id/fav_grade"
+                    android:text="Leicht" />
+            </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

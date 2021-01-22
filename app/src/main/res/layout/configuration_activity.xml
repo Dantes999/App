@@ -29,6 +29,8 @@
                     android:id="@+id/textField"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:boxStrokeColor="?attr/colorOnPrimary"
+                    app:hintTextColor="?attr/colorOnPrimary"
                     android:hint="@string/doughmass"
                     android:layout_margin="@dimen/activity_horizontal_margin">
 
