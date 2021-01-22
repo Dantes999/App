@@ -5,10 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.widget.TextViewCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.Plan
+import com.example.myapplication.PlanerRecyclerViewAdapter
 import com.example.myapplication.R
+import com.google.android.material.slider.RangeSlider
+
 
 class SettingsFragment : Fragment() {
 
@@ -22,10 +29,14 @@ class SettingsFragment : Fragment() {
         settingsViewModel =
             ViewModelProvider(this).get(SettingsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_settings, container, false)
-        val textView: TextView = root.findViewById(R.id.text_settings)
-        settingsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+        val SliderText : TextView = root.findViewById(R.id.RangeSliderText)
+        val slider: RangeSlider = root.findViewById(R.id.slider)
+        slider.setValues(1.0f, 5.0f)
+        slider.addOnChangeListener { slider, value, fromUser ->
+            val vals = slider.values
+            SliderText.setText("%.2f".format(vals[0]).toString()+":"+"%.2f".format(vals[1]).toString())
+        }
         return root
     }
+
 }
