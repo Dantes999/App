@@ -44,8 +44,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_starter"
-                            android:tint="?attr/colorOnAccent"
-                            android:alpha="@integer/card_image_alpha"></ImageView>
+                            android:alpha="@integer/card_image_alpha"
+                            app:tint="?attr/colorOnAccent"></ImageView>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -79,8 +79,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_sourdough"
-                            android:tint="?attr/colorOnQuaternary"
-                            android:alpha="@integer/card_image_alpha"></ImageView>
+                            android:alpha="@integer/card_image_alpha"
+                            app:tint="?attr/colorOnQuaternary"></ImageView>
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -114,8 +114,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_breat_outlines"
-                            android:tint="?attr/colorOnTertiary"
-                            android:alpha="@integer/card_image_alpha"></ImageView>
+                            android:alpha="@integer/card_image_alpha"
+                            app:tint="?attr/colorOnTertiary"></ImageView>
                     </RelativeLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

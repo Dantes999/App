@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manual"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.ManualFragment"
+    android:background="?attr/colorQuaternary">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/manualGif"
+            android:layout_width="278dp"
+            android:layout_height="278dp"
+            android:layout_marginVertical="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/colorAccent"/>
+
+        <TextView
+            android:id="@+id/manualInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/manualGif"
+            android:layout_margin="30dp"
+            android:text="Instructions"
+            android:textSize="20dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/manualInstructions"/>
+        <Button
+            android:id="@+id/startrecipebutton"
+            style="Widget.MaterialComponents.Button"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Nächster Schritt"
+            android:backgroundTint="?attr/colorAccent"
+            android:textColor="?attr/colorOnAccent"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
