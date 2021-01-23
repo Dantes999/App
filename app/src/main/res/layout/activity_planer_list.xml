@@ -10,6 +10,6 @@
         android:id="@+id/planer_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/plan_list_item"/>
+        tools:listitem="@layout/item_plan_list"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

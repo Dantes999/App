@@ -33,7 +33,7 @@ class IngredianceRecyclerViewAdapter (private val ingredientsList: List<Ingredie
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.incredeance_list_item, viewGroup, false)
+            .inflate(R.layout.item_incredeance_list, viewGroup, false)
 
         return ViewHolder(view)
     }
