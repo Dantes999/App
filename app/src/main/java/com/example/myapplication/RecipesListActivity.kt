@@ -11,6 +11,8 @@ class RecipesListActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recipes_list)
         setTitle("Sauerteig Führung");
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val exampleRecipes = generateDummyList()
 
         sourdough_recycler_view.adapter = RecipesRecyclerViewAdapter(exampleRecipes)

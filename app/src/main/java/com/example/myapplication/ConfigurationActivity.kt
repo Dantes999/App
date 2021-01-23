@@ -10,8 +10,9 @@ import kotlinx.android.synthetic.main.configuration_activity.*
 class ConfigurationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.configuration_activity)
+        setContentView(R.layout.activity_configuration)
         setTitle("Sauerteig Führung");
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val exampleInc = generateIncDummyList()
         val exampleSteps = generateStepsDummyList()
 

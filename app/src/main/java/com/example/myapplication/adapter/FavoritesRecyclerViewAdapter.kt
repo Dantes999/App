@@ -32,7 +32,7 @@ class FavoritesRecyclerViewAdapter(private val favList: List<Favorite>) :
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.fav_list_item, viewGroup, false)
+            .inflate(R.layout.item_fav_list, viewGroup, false)
         return ViewHolder(view)
     }
 

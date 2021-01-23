@@ -11,7 +11,7 @@ class LoadingActivity : AppCompatActivity() {
     private lateinit var mRunnable: Runnable
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.loading_activity)
+        setContentView(R.layout.activity_loading)
 
         mRunnable = Runnable {
             startActivity(Intent(this, HomeActivity::class.java))

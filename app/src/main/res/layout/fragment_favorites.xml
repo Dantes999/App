@@ -10,6 +10,6 @@
         android:id="@+id/favorites_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/fav_list_item"/>
+        tools:listitem="@layout/item_fav_list"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

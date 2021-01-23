@@ -32,7 +32,7 @@ class PlanerRecyclerViewAdapter(private val planList: List<Plan>) :
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.plan_list_item, viewGroup, false)
+            .inflate(R.layout.item_plan_list, viewGroup, false)
         return ViewHolder(view)
     }
 

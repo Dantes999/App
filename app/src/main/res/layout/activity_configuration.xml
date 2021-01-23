@@ -57,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/incredeance_recyclerview"
-                    tools:listitem="@layout/incredeance_list_item"
+                    tools:listitem="@layout/item_incredeance_list"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
                 <TextView
@@ -75,7 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/stepbystep_recyclerview"
-                    tools:listitem="@layout/stepbystep_list_item"
+                    tools:listitem="@layout/item_stepbystep_list"
                     />
 
             </LinearLayout>

@@ -20,7 +20,7 @@ class ManualFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.manual_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_manual, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
