@@ -14,7 +14,6 @@ import com.example.myapplication.adapter.StepByStepRecyclerViewAdapter
 import com.example.myapplication.dataclasses.Ingredients
 import com.example.myapplication.dataclasses.StepByStep
 import kotlinx.android.synthetic.main.activity_configuration.*
-import kotlinx.android.synthetic.main.activity_configuration.*
 import java.math.BigInteger
 
 
