@@ -1,11 +1,15 @@
 package com.example.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.adapter.IngredianceRecyclerViewAdapter
+import com.example.myapplication.adapter.StepByStepRecyclerViewAdapter
 import com.example.myapplication.dataclasses.Ingredients
-import kotlinx.android.synthetic.main.configuration_activity.*
+import com.example.myapplication.dataclasses.StepByStep
+import kotlinx.android.synthetic.main.activity_configuration.*
 
 class ConfigurationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +24,12 @@ class ConfigurationActivity : AppCompatActivity() {
        incredeance_recyclerview.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
        incredeance_recyclerview.setHasFixedSize(true)
 
-//        stepbystep_recyclerview.adapter = StepByStepRecyclerViewAdapter(exampleSteps)
-//        stepbystep_recyclerview.layoutManager = LinearLayoutManager(this)
-//        stepbystep_recyclerview.setHasFixedSize(true)
+        startrecipebutton.setOnClickListener{
+            startActivity(Intent(this, ManualActivity::class.java))
+        }
+        stepbystep_recyclerview.adapter = StepByStepRecyclerViewAdapter(exampleSteps)
+        stepbystep_recyclerview.layoutManager = LinearLayoutManager(this)
+        stepbystep_recyclerview.setHasFixedSize(true)
     }
 
     private fun generateStepsDummyList(): List<StepByStep> {

@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.ConfigurationActivity
 import com.example.myapplication.R
-import com.example.myapplication.Recipe
+import com.example.myapplication.dataclasses.Recipe
 
 class RecipesRecyclerViewAdapter(
     private val recipeList: List<Recipe>

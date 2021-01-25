@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplication.adapter.RecipesRecyclerViewAdapter
+import com.example.myapplication.dataclasses.Recipe
 import kotlinx.android.synthetic.main.activity_recipes_list.*
 
 class RecipesListActivity : AppCompatActivity() {
