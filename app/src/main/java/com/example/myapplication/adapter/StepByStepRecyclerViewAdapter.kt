@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
-import com.example.myapplication.StepByStep
+import com.example.myapplication.dataclasses.StepByStep
 
 class StepByStepRecyclerViewAdapter (private val stepList: List<StepByStep>) :
     RecyclerView.Adapter<StepByStepRecyclerViewAdapter.ViewHolder>() {

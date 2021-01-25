@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.dataclasses
 
 data class StepByStep(val titel: String,
 
