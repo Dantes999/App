@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.HomeActivity
 import com.example.myapplication.R
 import com.example.myapplication.adapter.ManualRecyclerviewAdapter
 import com.example.myapplication.dataclasses.ManualStep
@@ -34,7 +35,6 @@ class ManualFragment : Fragment(), ManualRecyclerviewAdapter.OnItemClickListener
         savedInstanceState: Bundle?
     ): View {
         val root = inflater.inflate(R.layout.fragment_manual, container, false)
-
         val recyclerView: RecyclerView = root.findViewById(R.id.manualrecyclerview)
         recyclerView.adapter = ManualRecyclerviewAdapter(exampleManual, this)
         recyclerView.layoutManager =
@@ -53,8 +53,11 @@ class ManualFragment : Fragment(), ManualRecyclerviewAdapter.OnItemClickListener
                 currentPosition++
                 gifImageView.setImageResource(exampleManual[currentPosition].gifResource)
                 textView.text = exampleManual[currentPosition].description
-            } else {
-                TODO()
+            }else {
+                requireActivity().run{
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    finish()
+                }
             }
         }
         return root
