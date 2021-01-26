@@ -65,26 +65,26 @@ class ConfigurationActivity : AppCompatActivity() {
             R.drawable.img_mix,
             R.drawable.img_timer
             )
-        val steptwo = StepByStep("1. Stufe     Anfrischsauer", "Schritt 1", "Schritt 2", "", "4 bis 5h  Stehzeit",
-            "Gib 50g Anstellgut, 80g Mehl und 80ml Wasser in eine Schüssel",
-            "Vermenge die Zutaten miteinander",
+        val steptwo = StepByStep("2. Stufe     Grundsauer", "Schritt 1", "Schritt 2", "", "8h  Stehzeit",
+            "Gib 570g Mehl und 375ml Wasser zu dem Anstellsauer ",
+            "Vermenge die Zutaten  miteinander",
             "",
-            "Teigtemperatur: 24 bis 26 °C\\n\" +\n" +
-                    "                \"Teigausbeute: 200",
+            "Teigtemperatur: 22 bis 26 °C\n" +
+                    "Teigausbeute: 165",
             R.drawable.img_addingr,
             R.drawable.img_mix,
             R.drawable.img_mix,
             R.drawable.img_timer
         )
-        val stepthree = StepByStep("1. Stufe     Anfrischsauer", "Schritt 1", "Schritt 2", "", "4 bis 5h  Stehzeit",
-            "Gib 50g Anstellgut, 80g Mehl und 80ml Wasser in eine Schüssel",
-            "Vermenge die Zutaten miteinander",
-            "",
-            "Teigtemperatur: 24 bis 26 °C\\n\" +\n" +
-                    "                \"Teigausbeute: 200",
+        val stepthree = StepByStep("3. Stufe     Vollsauer", "Schritt 1", "Schritt 2", "Schritt3", "8h  Stehzeit",
+            "Gib 1350g Mehl und 1575ml Wasser zu dem Grundsauer",
+            "Vermenge die Zutaten  miteinander",
+            "100g Anstellgut abnehmen",
+            "Teigtemperatur: 30 °C\n" +
+                    "Teigausbeute: 200",
             R.drawable.img_addingr,
             R.drawable.img_mix,
-            R.drawable.img_mix,
+            R.drawable.img_addingr,
             R.drawable.img_timer
         )
         list1 +=stepone

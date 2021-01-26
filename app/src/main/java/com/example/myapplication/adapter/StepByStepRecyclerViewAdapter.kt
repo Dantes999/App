@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
@@ -34,6 +35,8 @@ class StepByStepRecyclerViewAdapter (private val stepList: List<StepByStep>) :
         val stepThreeImage: ImageView
         val stepFourImage: ImageView
 
+        val stepThreeLayout: LinearLayout
+
 
 
         init {
@@ -54,6 +57,8 @@ class StepByStepRecyclerViewAdapter (private val stepList: List<StepByStep>) :
             stepTwoImage = view.findViewById(R.id.steptwoimage)
             stepThreeImage = view.findViewById(R.id.stepthreeimage)
             stepFourImage = view.findViewById(R.id.stepfourimage)
+
+            stepThreeLayout = view.findViewById(R.id.stepthree)
         }
     }
 
@@ -87,6 +92,13 @@ class StepByStepRecyclerViewAdapter (private val stepList: List<StepByStep>) :
         viewHolder.stepTwoImage.setImageResource(currentItem.stepTwoImgRes)
         viewHolder.stepThreeImage.setImageResource(currentItem.stepThreeImgRes)
         viewHolder.stepFourImage.setImageResource(currentItem.stepFourImgRes)
+
+        if(currentItem.stepThreeTitel==""){
+            viewHolder.stepThreeLayout.visibility = View.GONE
+        }
+        else{
+            viewHolder.stepThreeLayout.visibility = View.VISIBLE
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)
