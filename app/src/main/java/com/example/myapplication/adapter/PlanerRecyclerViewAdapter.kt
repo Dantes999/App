@@ -6,8 +6,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.dataclasses.Plan
 import com.example.myapplication.R
+import com.example.myapplication.dataclasses.ManualStep
+import com.example.myapplication.dataclasses.Plan
 
 private val ITEM_VIEW_TYPE_HEADER = 0
 private val ITEM_VIEW_TYPE_ITEM = 1
@@ -46,7 +47,7 @@ class PlanerRecyclerViewAdapter(private val planList: List<Plan>) :
         viewHolder.planImage2.setImageResource(currentItem.imageResource2)
         viewHolder.headerTextView.text =  "  "+currentItem.category
         if (position > 0 ){
-            val lastItem = planList[position-1]
+            val lastItem = planList[position - 1]
             if(lastItem.categoryId != currentItem.categoryId){
                 viewHolder.headerTextView.visibility = View.VISIBLE
             } else {
@@ -58,5 +59,4 @@ class PlanerRecyclerViewAdapter(private val planList: List<Plan>) :
     }
 
     override fun getItemCount() = planList.size
-
 }
